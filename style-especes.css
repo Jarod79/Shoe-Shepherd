@@ -1,0 +1,209 @@
+
+/* --------------------------------- I. DESKTOP VERSION -----------------------------------------*/
+
+/* I.4. Content */
+#content {
+    color: aliceblue;
+}
+#content h1 {
+    text-align: center;
+}
+.casual-text {
+    text-align: justify;
+    margin-left: 2%;
+    width: 95%;
+    line-height: 1.5rem;
+}
+#don {
+    text-align: center;
+}
+/*Organisation du grid et ses éléments*/
+.grid-especes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    height: 80vw;
+}
+#sneakers {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url(imgEspeces/especes-sneakers.jpg);
+    background-size: 100% 100%;
+}
+#tongs {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: -1;
+    background-image: url(imgEspeces/especes-tongs.jpg);
+    background-size: cover;
+    background-position: center top 20%;
+}
+#converses {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url(imgEspeces/especes-converses.jpg);
+    background-size: 100% 100%;
+}
+#sandales {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-image: url(imgEspeces/especes-sandales.jpg);
+    background-size: cover;
+}
+#rollers {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: -1;
+    background-image: url(imgEspeces/especes-rollers.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#bottes {
+    grid-row-start: 3;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    background-image: url(imgEspeces/especes-bottes.jpg);
+    background-size: cover;
+    background-position: center bottom 30%;
+}
+
+/*Overlay sur chaque photo avec le nom qui apparaît quand on hover*/
+.esp {
+    position: relative;
+    margin: 3vh 2vw;
+    box-shadow: rgb(255, 255, 255) 0px 0px 20px -5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.404);
+    width: 100%;
+    bottom: 0%;
+    text-align: center;
+    padding: 1rem 0px;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    transition: 0.6s ease;
+    font-size: 1.2rem;
+}
+.esp:hover .overlay {
+    opacity: 1;
+}
+/*Propriétés du modal après avoir cliqué sur une photo*/
+#modal-container {
+    display: none;    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+}
+#close-button {
+    font-size: 3rem;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    transition: 0.2s;
+}
+#close-button:hover {
+    color:rgb(119, 7, 7);
+    font-size: 4rem;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+#modal-text {
+    width: 50%;
+    margin: auto;
+    text-align: justify;
+    padding: 1rem;
+    background-color: rgba(119, 7, 7, 0.2);
+    border-radius: 10px;
+    margin-top: 2rem;
+    line-height: 1.5rem;
+}
+#modal-title {
+    text-align: center;
+    padding-top: 2rem;
+}
+/* --------------------------------- II. RESPONSIVE VERSION -----------------------------------------*/
+@media screen and (max-width:768px){
+ 
+    /* II.4. Responsive Content */
+    #content {
+        width: 100vw;
+        font-size: 0.8rem;
+    }
+    #content h1 {
+        font-size: 1.5em;
+        margin-top: 1rem;
+    }
+    .casual-text {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        line-height: 1.1rem;
+    }
+    /*Organisation des espèces de chaussures*/
+    .grid-especes {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .esp {
+        width: 80vw;
+        height: 50vw;
+        margin: 3% auto;
+        box-shadow: rgb(255, 255, 255) 0px 0px 20px -10px;
+    }
+    #sneakers {
+        background-size: cover;
+        background-position: center bottom 20%;
+    }
+    #converses {
+        background-size: cover;
+        background-position: center bottom 40%;
+    }
+    #sandales {
+        background-size: cover;
+        background-position: center;
+    }
+    #bottes {
+        background-size: cover;
+        background-position: center bottom 20%;
+    }
+    .overlay {
+        opacity: 0.9;
+        bottom: 25%;
+        border-radius: 0;
+        font-size: 1rem;
+    }
+    /*Propriétés du modal*/
+    #close-button {
+        color:rgb(119, 7, 7);
+        top: 1%;
+    }
+    #modal-text {
+        text-align: center;
+        line-height: 1.1rem;
+        width: 75%;
+    }
+    strong {
+        color:rgb(159, 47, 47);
+    }
+}
+/* ------------------------------------------------version paysage--------------------------------------------------------- */
+@media (orientation:landscape) and (max-height:400px){
+}
