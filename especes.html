@@ -12,13 +12,24 @@
     <!--link pour la police d'écriture utilisée-->
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E%3E">
     <link rel="stylesheet" href="style-especes.css" />
+    <link rel="stylesheet" href="nav-header.css" type="text/css">
     <script defer src='especes.js'></script>
 </head>
 
 <body>
     <div class='container-all-especes'>
         <header>
-
+            <nav>
+                <div id="logo-header">
+                    <a href="index.html"> <img class="logo" src="img-header-footer/logo-shoe.PNG" alt="Logo"></a>
+                </div>
+                <a href="index.html" id="accueil">SHOE SHEPHERD</a>
+                <ul id="menu">
+                    <li><a class="link" href="histoire.html">Histoire</a></li>
+                    <li><a class="link" href="especes.html">Les Espèces</a></li>
+                    <li><a class="link" href="contact.html">A propos</a></li>
+                </ul>
+            </nav>
         </header>
 
         <div id='content'>
@@ -146,7 +157,22 @@
         </div>
 
         <footer>
-
+            <div id="bottom">
+                <div id="logo-footer"><a href="#container"><img class="logo" src="img-header-footer/logo-shoe.PNG"
+                            alt="Logo"></a>
+                </div>
+                <article id="copyright">
+                    <h5>Copyright © 2021</h5>
+                </article>
+                <div id="right-footer">
+                    <a href="https://www.facebook.com/solematelostshoes/" target="blank"><img class="icon"
+                            src="img-header-footer/IconFacebook.png" alt="Facebook"></a>
+                    <a href="https://twitter.com/mache275" target="blank"><img class="icon"
+                            src="img-header-footer/IconTwitter.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/shoefiti.project/" target="blank"><img class="icon"
+                            src="img-header-footer/IconInstagram.png" alt="Instagram"></a>
+                </div>
+            </div>
         </footer>
         <!--Scroll button-->
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
