@@ -163,7 +163,9 @@ input[type=text], textarea, input[type=email] {
 
 
 
-
+/* ------------------------------------------------version paysage--------------------------------------------------------- */
+@media (orientation:landscape) and (max-height:400px){
+}
 
 
 
